@@ -1,0 +1,28 @@
+<div class="flex flex-col my-20 items-center mx-auto bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <section class="my-20 mx-auto">
+        <div class="add-lessons-form" [formGroup]="form">  
+            <ng-container class="formGroup" formArrayName="lessons">
+                <ng-container *ngFor="let lessonForm of lessons.controls; let i = index">
+                    <div class="lesson-form-row">
+                        <div>
+                            <div class="flex rounded-lg shadow-sm mt-2">
+                              <input type="text" id="title" name="title" formControlName="title" class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+                              <button (click)="deleteLesson(i)" class="py-3 px-4 ml-2 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                                Remove
+                              </button>
+                            </div>
+                          </div>
+                    </div>
+                </ng-container>
+            </ng-container>
+            <div class="flex">
+                <button (click)="addLesson()" class="py-2 px-4 mt-2 ml-0.5 rounded-lg shadow-sm inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                    Add
+                </button>
+                <button (click)="onSubmit()" class="py-2 px-4 mt-2 ml-0.5 rounded-lg shadow-sm inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                    submit
+                </button>
+            </div>
+        </div>
+        </section>
+</div>

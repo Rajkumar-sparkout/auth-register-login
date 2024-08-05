@@ -1,0 +1,78 @@
+{
+  "user": [
+    {
+      "id": "5aa6",
+      "name": "Raj",
+      "email": "raj@gmail.com",
+      "mobileNumber": 1236987450,
+      "gender": "Male",
+      "areaOfInterest": true,
+      "dateOfBirth": "08/13/2024",
+      "course": "ECE",
+      "password": "Raj@1234",
+      "confirmPassword": "Raj@1234",
+      "profile": "C:\\fakepath\\natural.jpg"
+    },
+    {
+      "id": "6f8e",
+      "name": "Vujay",
+      "email": "vijay@gmail.com",
+      "mobileNumber": 1236987450,
+      "gender": "Male",
+      "areaOfInterest": true,
+      "dateOfBirth": "08/13/2024",
+      "course": "EEE",
+      "password": "Vijay@123",
+      "confirmPassword": "Vijay@123",
+      "profile": "C:\\fakepath\\natural.jpg"
+    },
+    {
+      "id": "ce93",
+      "name": "Dhanush",
+      "email": "dhanush@gmail.com",
+      "mobileNumber": 1236987450,
+      "gender": "Male",
+      "areaOfInterest": true,
+      "dateOfBirth": "08/13/2024",
+      "course": "ECE",
+      "password": "Dhanush@123",
+      "profile": "C:\\fakepath\\profile.jpg"
+    },
+    {
+      "id": "e8e9",
+      "name": "Kumar",
+      "email": "kumar@gmail.com",
+      "mobileNumber": 1236987450,
+      "gender": "Male",
+      "areaOfInterest": true,
+      "dateOfBirth": "08/13/2024",
+      "course": "EEE",
+      "password": "Kumar@123",
+      "profile": "C:\\fakepath\\natural.jpg"
+    },
+    {
+      "id": "a6c6",
+      "name": "Raju",
+      "email": "raju@gmail.com",
+      "mobileNumber": 1236987450,
+      "gender": "Male",
+      "areaOfInterest": true,
+      "dateOfBirth": "08/01/2024",
+      "course": "IT",
+      "password": "Raju@123",
+      "profile": "C:\\fakepath\\natural.jpg"
+    },
+    {
+      "id": "24b1",
+      "name": "Raj",
+      "email": "raj@gmail.com",
+      "mobileNumber": 9090900990,
+      "gender": "Male",
+      "areaOfInterest": true,
+      "dateOfBirth": "08/13/2024",
+      "course": "ECE",
+      "password": "Ruban@123",
+      "profile": "C:\\fakepath\\natural.jpg"
+    }
+  ]
+}
