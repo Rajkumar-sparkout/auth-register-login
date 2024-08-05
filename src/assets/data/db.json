@@ -61,18 +61,6 @@
       "course": "IT",
       "password": "Raju@123",
       "profile": "C:\\fakepath\\natural.jpg"
-    },
-    {
-      "id": "24b1",
-      "name": "Raj",
-      "email": "raj@gmail.com",
-      "mobileNumber": 9090900990,
-      "gender": "Male",
-      "areaOfInterest": true,
-      "dateOfBirth": "08/13/2024",
-      "course": "ECE",
-      "password": "Ruban@123",
-      "profile": "C:\\fakepath\\natural.jpg"
     }
   ]
 }
