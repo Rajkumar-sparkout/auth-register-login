@@ -10,7 +10,7 @@ export const routes: Routes = [
     { path: "", redirectTo: "/user-login", pathMatch: "full" },
     { path: "add-user", component: ReactiveFormComponent },
     { path: "user-login", component: UserLoginComponent },
-    { path: "logut", component: UserLoginComponent },
+    { path: "logout", component: UserLoginComponent },
     { path: "form-array", component: FomArrayComponent },
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
 ];

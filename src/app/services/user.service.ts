@@ -22,6 +22,17 @@ export class UserService {
     return this.http.get<User[]>(`${this.apiUrl}/user?email=${email}`)
   }
 
+  /**
+  getAllUsers(): Observable<User[]>{
+    let headers = new HttpHeaders();
+    //set method returns new instance after modifying the header
+    //this instance is immutable so, we cannot change anything and it returns new instance
+    headers = headers.set("content-type", 'application/json');
+    headers = headers.set("Access-Control-Allow-Origin", '*');
+    return this.http.get<User[]>(`${this.apiUrl}/user?email=${email}`, {headers: headers})
+  }
+   */
+
 
   // logout(): void {
   //   localStorage.removeItem('currentUser');
