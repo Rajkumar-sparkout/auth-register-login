@@ -10,6 +10,7 @@ import { Login } from '../interface/login';
 export class UserService {
 
   public apiUrl = "http://localhost:3000";
+  public jsonUrl = 'https://jsonplaceholder.typicode.com';
 
   constructor(private http: HttpClient) {
   }
@@ -21,6 +22,39 @@ export class UserService {
   getUserByEmail(email: string): Observable<User[]>{
     return this.http.get<User[]>(`${this.apiUrl}/user?email=${email}`)
   }
+
+  getAllUser(): Observable<any>{
+    return this.http.get<any>(`${this.jsonUrl}/users`);
+  }
+
+  getPostByUserId(userId: number): Observable<number>{
+    return this.http.get<number>(`${this.jsonUrl}/posts?userId=${userId}`);
+  }
+
+  getCommentsPostById(postId: number): Observable<number>{
+    return this.http.get<number>(`${this.jsonUrl}/comments?postId=${postId}`);
+  }
+
+  public postItemList: any = [];
+  public postList = new BehaviorSubject<any>([]);
+
+  getPosts() {
+    return this.postList.asObservable();
+  }
+
+  setPost(post: any) {
+    this.postItemList.push(...post);
+    this.postList.next(post)
+  }
+
+  addPost(post: any) {
+    this.postItemList.push(post);
+    this.postList.next(this.postItemList);
+  }
+
+
+
+
 
   /**
   getAllUsers(): Observable<User[]>{

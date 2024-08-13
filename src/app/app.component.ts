@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
@@ -26,14 +27,11 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     // initFlowbite();
     this.flowbiteService.loadFlowbite(flowbite => {
-      // Your custom code here
       console.log('Flowbite loaded', flowbite);
     });
-
-    if(localStorage.getItem('email')){
-      this.router.navigate(['/dashboard'])
-    }else{
-    this.router.navigate(['/user-login'])
-    }
   }
 }
+
+/**
+ * ng deploy --hosting
+ */

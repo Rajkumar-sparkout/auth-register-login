@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { Router, RouterLink } from '@angular/router';
@@ -12,12 +12,18 @@ import { PopupMessageComponent } from '../popup-message/popup-message.component'
   templateUrl: './user-login.component.html',
   styleUrl: './user-login.component.css'
 })
-export class UserLoginComponent {
+export class UserLoginComponent implements OnInit{
 
   constructor(
     private userService: UserService, 
     private router: Router
   ) {}
+
+  ngOnInit(): void {
+    if(localStorage.getItem('email')){
+      this.router.navigate(['/dashboard'])
+    }
+  }
 
   loginForm = new FormGroup({
     email : new FormControl("", Validators.required),
@@ -43,6 +49,7 @@ export class UserLoginComponent {
           this.message = 'Login successfull';
           this.messageType = 'success';
           setTimeout(()=> {
+            // this.router.navigate(['/dashboard'])
             window.location.href = window.location.href
           }, 1000);
         }else{
